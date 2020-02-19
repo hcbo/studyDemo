@@ -6,9 +6,13 @@
 
   <groupId>com.hcb</groupId>
   <artifactId>studyDemo</artifactId>
-  <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>grpcDemo</module>
+    </modules>
 
-  <name>studyDemo</name>
+    <name>studyDemo</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -41,6 +45,12 @@
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
       <version>1.10</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.38</version>
     </dependency>
   </dependencies>
 
@@ -88,5 +98,15 @@
         </plugin>
       </plugins>
     </pluginManagement>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                  <source>8</source>
+                  <target>8</target>
+              </configuration>
+          </plugin>
+      </plugins>
   </build>
 </project>

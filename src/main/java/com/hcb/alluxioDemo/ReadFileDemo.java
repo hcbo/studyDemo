@@ -20,7 +20,7 @@ public class ReadFileDemo
     {
         /* 1.获取文件系统FileSystem */
         InstancedConfiguration conf = InstancedConfiguration.defaults();
-        conf.set(PropertyKey.SECURITY_LOGIN_USERNAME, "root");
+        conf.set(PropertyKey.SECURITY_LOGIN_USERNAME, "administrator");
         FileSystem fs = FileSystem.Factory.create(conf);
         AlluxioURI path;
         path = new AlluxioURI("/dummy/wordCountInput.txt");

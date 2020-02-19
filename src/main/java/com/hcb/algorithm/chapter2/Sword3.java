@@ -1,4 +1,4 @@
-package com.hcb.algorithm;
+package com.hcb.algorithm.chapter2;
 
 import java.util.Scanner;
 
