@@ -1,5 +1,9 @@
 package com.hcb;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Hello world!
  *
@@ -23,5 +27,13 @@ public class App
 
 
 
+
+        System.out.println(4^6);
+
+
+
+
     }
+
+
 }
