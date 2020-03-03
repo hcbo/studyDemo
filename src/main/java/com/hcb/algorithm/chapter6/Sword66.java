@@ -15,8 +15,6 @@ public class Sword66 {
             product *= A[i];
         }
 
-
-
         for (int i = n - 1, product = 1; i >= 0;  i--){
             /* 从右往左累乘 */
             B[i] *= product;
