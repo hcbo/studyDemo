@@ -6,7 +6,7 @@ package com.hcb.JVMDemo;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class DataSourcesLoader implements Runnable{
+public class JoinDemo implements Runnable{
 
     @Override
     public void run() {
@@ -20,13 +20,13 @@ public class DataSourcesLoader implements Runnable{
     }
 
     public static void main(String[] args){
-        DataSourcesLoader dsLoader = new DataSourcesLoader();
+        JoinDemo dsLoader = new JoinDemo();
         Thread thread1 = new Thread(dsLoader,"DataSourceThread");
 
         thread1.start();
 
         try {
-            thread1.join(3000);
+            thread1.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -1,5 +1,7 @@
 package com.hcb.JVMDemo;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * volatile变量自增运算测试
  *
@@ -8,9 +10,11 @@ package com.hcb.JVMDemo;
 public class VolatileTest {
 
     public static volatile int race = 0;
+    public static AtomicInteger race2 = new AtomicInteger(0);
 
-    public static void increase() {
+    public static  void increase() {
         race++;
+        race2.addAndGet(1);
     }
 
     private static final int THREADS_COUNT = 20;
@@ -34,5 +38,6 @@ public class VolatileTest {
             Thread.yield();
 
         System.out.println(race);
+        System.out.println(race2);
     }
 }
